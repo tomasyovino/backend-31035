@@ -83,7 +83,7 @@ class Container {
 const product = new Container("products");
 
 app.get("/", (req, res) => {
-    res.send(`<span>ve a "/products" o este mensaje malvado robará tus códigos</span>`);
+    res.send(`<span>ve a "/products" o a "/randomProduct", o este mensaje malvado robará tus códigos</span>`);
 });
 
 app.get("/products", (req, res, next) => {
