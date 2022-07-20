@@ -6,7 +6,7 @@ const list = () => {
 };
 
 const findOneById = (id) => {
-    return data.find((product) => product.id === id)
+    return data.find((product) => product.id == id)
 };
 
 const add = (title, price, thumbnail) => {
@@ -17,15 +17,15 @@ const add = (title, price, thumbnail) => {
 
 const deleteById = (id) => {
     data.forEach((product, i) => {
-        if (product.id === id) data.splice(i, 1);
+        if (product.id == id) data.splice(i, 1);
     });
 };
 
 const updateById = (id, newTitle, newPrice, newThumbnail) => {
     const product = findOneById(id);
     product.title = newTitle;
-    product.newPrice = newPrice;
-    product.newThumbnail = newThumbnail;
+    product.price = newPrice;
+    product.thumbnail = newThumbnail;
 };
 
 module.exports = { add, list, findOneById, deleteById, updateById };

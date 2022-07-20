@@ -33,7 +33,7 @@ productsRouter.put("/:id", (req, res) => {
 
 productsRouter.delete("/:id", (req, res) => {
     const { id } = req.params;
-    res.send(productsBank.deleteById(parseInt(id)));
+    res.send(productsBank.deleteById(id));
 });
 
 module.exports = productsRouter;
